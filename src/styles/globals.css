@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './design-system.css';
+@import './animations.css';
+
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography defaults */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  color: var(--color-text-primary);
+}
+
+h1 {
+  font-size: var(--font-size-4xl);
+}
+
+h2 {
+  font-size: var(--font-size-3xl);
+}
+
+h3 {
+  font-size: var(--font-size-2xl);
+}
+
+h4 {
+  font-size: var(--font-size-xl);
+}
+
+/* Focus styles for accessibility */
+*:focus-visible {
+  outline: 2px solid var(--color-primary-500);
+  outline-offset: 2px;
+}
+
+/* Remove default focus outline for mouse users */
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Links */
+a {
+  color: var(--color-primary-600);
+  text-decoration: none;
+  transition: color var(--transition-fast) var(--ease-in-out);
+}
+
+a:hover {
+  color: var(--color-primary-700);
+}
+
+/* Buttons - base styles */
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* Inputs - base styles */
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Remove default button styling */
+button:focus {
+  outline: none;
+}
+
+/* Smooth transitions for interactive elements */
+button, a, input, select, textarea {
+  transition: all var(--transition-base) var(--ease-in-out);
+}
+
+/* Selection color */
+::selection {
+  background-color: var(--color-primary-200);
+  color: var(--color-text-primary);
+}
+
+/* Scrollbar styling (webkit browsers) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-gray-400);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gray-500);
+}
+
